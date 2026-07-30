@@ -15,6 +15,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Flame,
+  PanelLeft,
+  UserCheck,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -57,6 +59,18 @@ export default function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
       path: "/gallery/cards",
       icon: Layers,
       description: "Variant product/info cards",
+    },
+    {
+      name: "Design Sidebars",
+      path: "/gallery/sidebars",
+      icon: PanelLeft,
+      description: "Animated nav sidebar variants",
+    },
+    {
+      name: "User Welcome Card",
+      path: "/gallery/user-welcome",
+      icon: UserCheck,
+      description: "Post-login user greeting card",
     },
   ];
 
