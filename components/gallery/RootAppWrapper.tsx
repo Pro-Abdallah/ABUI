@@ -35,7 +35,7 @@ export default function RootAppWrapper({
 
   if (!isMounted) {
     // Return empty content with dark background to prevent layout flashes
-    return <div className="min-h-screen bg-[#090d16]" />;
+    return <div className="min-h-screen bg-[#09090b]" />;
   }
 
   return (

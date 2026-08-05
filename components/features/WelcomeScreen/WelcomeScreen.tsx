@@ -20,7 +20,7 @@ export default function WelcomeScreen({
   name = "Developer",
   systemName = "AB UI Kit",
   nameColor = "#ef4444", // Red-500
-  bgGradient = "linear-gradient(135deg, #0f172a 0%, #020617 100%)",
+  bgGradient = "linear-gradient(135deg, #09090b 0%, #020204 100%)",
   delayBeforeOut = 1800,
   animateDuration = 0.8,
   skippable = true,
@@ -73,8 +73,8 @@ export default function WelcomeScreen({
         onClick={skippable ? handleComplete : undefined}
       >
         {/* Decorative background glow circles */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-purple-500/10 blur-3xl pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-red-600/15 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-rose-600/15 blur-3xl pointer-events-none" />
 
         <div className="relative z-10 text-center px-4 flex flex-col items-center justify-center">
           {/* Animated Greeting */}

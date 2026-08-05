@@ -46,12 +46,12 @@ export default function HeadersPage() {
           controls={headerControls}
           renderComponent={(config) => (
             <header
-              className={`w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg p-4 flex items-center justify-between ${
-                config.sticky ? "shadow-md" : "shadow-sm"
+              className={`w-full bg-white dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-lg p-4 flex items-center justify-between ${
+                config.sticky ? "shadow-md shadow-red-950/20" : "shadow-sm"
               }`}
             >
               <div className="flex items-center gap-2">
-                <Flame className="w-5 h-5 text-blue-500 fill-blue-500" />
+                <Flame className="w-5 h-5 text-red-500 fill-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]" />
                 <span className="font-extrabold text-sm tracking-tight text-foreground">
                   {config.brandName || "NexusCorp"}
                 </span>
@@ -62,14 +62,14 @@ export default function HeadersPage() {
                   config.centeredMenu ? "mx-auto" : "ml-auto mr-4"
                 }`}
               >
-                <span className="hover:text-blue-500 transition-colors cursor-pointer">Dashboard</span>
-                <span className="hover:text-blue-500 transition-colors cursor-pointer">Analytics</span>
-                <span className="hover:text-blue-500 transition-colors cursor-pointer">Security</span>
-                <span className="hover:text-blue-500 transition-colors cursor-pointer">Pricing</span>
+                <span className="hover:text-red-500 transition-colors cursor-pointer">Dashboard</span>
+                <span className="hover:text-red-500 transition-colors cursor-pointer">Analytics</span>
+                <span className="hover:text-red-500 transition-colors cursor-pointer">Security</span>
+                <span className="hover:text-red-500 transition-colors cursor-pointer">Pricing</span>
               </nav>
 
               <div className="flex items-center gap-2">
-                <button className="px-3 py-1.5 text-xs font-bold bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                <button className="px-3 py-1.5 text-xs font-bold bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white rounded shadow-sm cursor-pointer">
                   Console
                 </button>
               </div>

@@ -91,7 +91,7 @@ export default function PreviewModal({
               onClick={() => setActiveTab("preview")}
               className={`flex-1 py-3 text-sm font-semibold border-b-2 flex items-center justify-center gap-2 ${
                 activeTab === "preview"
-                  ? "border-blue-500 text-blue-600 dark:text-blue-400"
+                  ? "border-red-500 text-red-600 dark:text-red-400"
                   : "border-transparent text-muted-foreground"
               }`}
             >
@@ -102,7 +102,7 @@ export default function PreviewModal({
               onClick={() => setActiveTab("code")}
               className={`flex-1 py-3 text-sm font-semibold border-b-2 flex items-center justify-center gap-2 ${
                 activeTab === "code"
-                  ? "border-blue-500 text-blue-600 dark:text-blue-400"
+                  ? "border-red-500 text-red-600 dark:text-red-400"
                   : "border-transparent text-muted-foreground"
               }`}
             >
@@ -122,7 +122,7 @@ export default function PreviewModal({
               {/* Desktop workspace controls */}
               <div className="hidden md:flex items-center justify-between mb-4 bg-background px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm shrink-0">
                 <span className="text-xs text-muted-foreground flex items-center gap-1.5">
-                  <Eye size={14} className="text-blue-500" />
+                  <Eye size={14} className="text-red-500" />
                   Live Preview Container (Dynamic Theme Responsive)
                 </span>
                 <div className="flex gap-2">
@@ -170,7 +170,7 @@ export default function PreviewModal({
               }`}
             >
               <div className="p-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex items-center gap-2 select-none shrink-0">
-                <Sliders size={16} className="text-blue-500" />
+                <Sliders size={16} className="text-red-500" />
                 <span className="text-sm font-bold tracking-tight text-foreground">Customization Panel</span>
               </div>
 
@@ -185,7 +185,7 @@ export default function PreviewModal({
                           {ctrl.label}
                         </label>
                         {ctrl.type === "slider" && (
-                          <span className="text-blue-500 font-mono">{val}</span>
+                          <span className="text-red-500 font-mono">{val}</span>
                         )}
                       </div>
 
@@ -195,7 +195,7 @@ export default function PreviewModal({
                           type="text"
                           value={val}
                           onChange={(e) => handleControlChange(ctrl.name, e.target.value)}
-                          className="px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 outline-none text-foreground"
+                          className="px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:ring-2 focus:ring-red-500/50 focus:border-red-500 outline-none text-foreground"
                         />
                       )}
 
@@ -205,7 +205,7 @@ export default function PreviewModal({
                           type="number"
                           value={val}
                           onChange={(e) => handleControlChange(ctrl.name, parseFloat(e.target.value))}
-                          className="px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 outline-none text-foreground"
+                          className="px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:ring-2 focus:ring-red-500/50 focus:border-red-500 outline-none text-foreground"
                         />
                       )}
 
@@ -214,7 +214,7 @@ export default function PreviewModal({
                           id={ctrl.name}
                           value={val}
                           onChange={(e) => handleControlChange(ctrl.name, e.target.value)}
-                          className="px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 outline-none text-foreground"
+                          className="px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:ring-2 focus:ring-red-500/50 focus:border-red-500 outline-none text-foreground"
                         >
                           {ctrl.options?.map((opt) => (
                             <option key={opt.value} value={opt.value}>
@@ -233,7 +233,7 @@ export default function PreviewModal({
                           step={ctrl.step ?? 1}
                           value={val}
                           onChange={(e) => handleControlChange(ctrl.name, parseFloat(e.target.value))}
-                          className="w-full accent-blue-500 cursor-pointer"
+                          className="w-full accent-red-500 cursor-pointer"
                         />
                       )}
 
@@ -264,7 +264,7 @@ export default function PreviewModal({
                             onChange={(e) => handleControlChange(ctrl.name, e.target.checked)}
                             className="sr-only peer"
                           />
-                          <div className="w-11 h-6 bg-slate-200 dark:bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[6px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                          <div className="w-11 h-6 bg-slate-200 dark:bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[6px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-red-600"></div>
                           <span className="ml-3 text-xs font-semibold text-muted-foreground">
                             {val ? "Enabled" : "Disabled"}
                           </span>
@@ -282,7 +282,7 @@ export default function PreviewModal({
                   className={`flex-1 py-2.5 px-4 rounded-lg font-bold transition-all shadow-sm active:scale-95 flex items-center justify-center gap-2 text-sm cursor-pointer ${
                     activeTab === "code"
                       ? "bg-slate-200 dark:bg-slate-800 text-foreground"
-                      : "bg-blue-600 hover:bg-blue-700 text-white"
+                      : "bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white shadow-md shadow-red-600/25"
                   }`}
                 >
                   {activeTab === "code" ? (

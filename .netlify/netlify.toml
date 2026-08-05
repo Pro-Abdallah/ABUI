@@ -1,5 +1,5 @@
-headersOrigin = "inline"
-redirectsOrigin = "inline"
+redirectsOrigin = "config"
+headers = []
 
 [functions]
 
@@ -12,12 +12,13 @@ package = "@netlify/plugin-nextjs"
 [plugins.inputs]
 
 [build]
-publish = "C:\\Users\\PC\\Components Web\\.next"
-publishOrigin = "ui"
-commandOrigin = "ui"
+publish = "C:\\Users\\PC\\Components Web\\out"
+publishOrigin = "config"
+commandOrigin = "config"
 command = "npm run build"
 
 [build.environment]
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [build.processing]
 
@@ -31,37 +32,13 @@ command = "npm run build"
 
 [build.services]
 
-[[headers]]
-for = "/_next/static/*"
-
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
 [[redirects]]
-from = "/_next/image"
-to = "/.netlify/images?url=:url&w=:width&q=:quality"
+from = "/*"
+to = "/index.html"
 status = 200.0
 force = false
 
 [redirects.query]
-url = ":url"
-w = ":width"
-q = ":quality"
-
-[redirects.conditions]
-
-[redirects.headers]
-
-[[redirects]]
-from = "/_ipx/*"
-to = "/.netlify/images?url=:url&w=:width&q=:quality"
-status = 200.0
-force = false
-
-[redirects.query]
-url = ":url"
-w = ":width"
-q = ":quality"
 
 [redirects.conditions]
 
